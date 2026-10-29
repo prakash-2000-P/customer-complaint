@@ -86,7 +86,7 @@ div[data-testid="stForm"] {
 .stApp h1,
 .stApp h2,
 .stApp h3 {
-    color: #30245f !important;
+    color: #ffffff !important;
 }
 
 .stApp p {
