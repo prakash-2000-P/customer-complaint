@@ -38,98 +38,223 @@ DEPARTMENTS = [
 STATUSES = ["Pending", "In Progress", "Resolved"]
 
 # Custom CSS
+
+# Custom CSS
 st.markdown("""
 <style>
+
+/* =========================
+   MAIN APPLICATION
+   ========================= */
 .stApp {
-    background: linear-gradient(135deg, #f5f3ff 0%, #f0f7ff 100%);
-}
-/* Sidebar background */
-[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #211c45, #44358a);
+    background: linear-gradient(135deg, #f5f3ff 0%, #eef5ff 100%);
+    color: #27304f;
 }
 
-/* Sidebar text visibility */
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] span,
-[data-testid="stSidebar"] .stCaption {
-    color: #ffffff !important;
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-/* Navigation radio labels */
-[data-testid="stSidebar"] div[role="radiogroup"] label,
-[data-testid="stSidebar"] div[role="radiogroup"] label p {
-    color: #ffffff !important;
-}
-
-/* Sidebar headings */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3 {
-    color: #ffffff !important;
-}
-h1, h2, h3 {
+/* Main headings */
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4 {
     color: #30245f !important;
 }
 
-p, label, [data-testid="stMarkdownContainer"] {
-    color: #30245f;
+/* Main content text */
+[data-testid="stAppViewContainer"] .main p,
+[data-testid="stAppViewContainer"] .main label,
+[data-testid="stAppViewContainer"] .main
+[data-testid="stMarkdownContainer"] {
+    color: #374151;
 }
-div.stButton > button {
-    background: linear-gradient(90deg, #6558d3, #8878ee);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 0.55rem 1rem;
-    font-weight: 600;
+
+/* =========================
+   SIDEBAR
+   ========================= */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #211c45 0%, #44358a 100%);
 }
-div.stButton > button:hover {
-    background: #4839ad;
-    color: white;
-    border: 1px solid #b8adff;
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] small,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: #ffffff !important;
+    opacity: 1 !important;
 }
-div[data-testid="stMetric"] {
-    background: white;
+
+/* Sidebar navigation */
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    color: #ffffff !important;
+    background: transparent;
+    border-radius: 8px;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: #ffffff1a;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.stButton > button,
+.stFormSubmitButton > button {
+    background: linear-gradient(90deg, #5b4bce, #7968ed) !important;
+    color: #ffffff !important;
+    border: 1px solid #5b4bce !important;
+    border-radius: 10px !important;
+    padding: 0.55rem 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+
+.stButton > button p,
+.stFormSubmitButton > button p {
+    color: #ffffff !important;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background: #4333a5 !important;
+    border-color: #4333a5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px #30245f30;
+}
+
+.stButton > button:focus,
+.stFormSubmitButton > button:focus {
+    outline: 2px solid #a99cff !important;
+    outline-offset: 2px;
+}
+
+/* =========================
+   INPUTS AND DROPDOWNS
+   ========================= */
+.stTextInput input,
+.stTextArea textarea,
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div {
+    background-color: #ffffff !important;
+    color: #27304f !important;
+    border-color: #c9c4e8 !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput input::placeholder,
+.stTextArea textarea::placeholder {
+    color: #7b8194 !important;
+}
+
+[data-baseweb="select"] *,
+[data-baseweb="popover"] * {
+    color: #27304f;
+}
+
+[data-testid="stTextInput"] label,
+[data-testid="stTextArea"] label,
+[data-testid="stSelectbox"] label,
+[data-testid="stMultiSelect"] label,
+[data-testid="stCheckbox"] label {
+    color: #30245f !important;
+}
+
+/* =========================
+   METRIC CARDS
+   ========================= */
+[data-testid="stMetric"] {
+    background: #ffffff;
     border: 1px solid #e4defa;
     padding: 18px;
     border-radius: 14px;
     box-shadow: 0 3px 12px #30245f12;
 }
-div[data-testid="stForm"] {
-    background: white;
+
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p {
+    color: #625b85 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #30245f !important;
+}
+
+/* =========================
+   FORMS AND EXPANDERS
+   ========================= */
+[data-testid="stForm"] {
+    background: #ffffff;
     padding: 18px;
     border-radius: 14px;
     border: 1px solid #e4defa;
 }
-/* Dashboard heading and description */
-.stApp h1,
-.stApp h2,
-.stApp h3 {
+
+[data-testid="stExpander"] {
+    background: #ffffff;
+    border: 1px solid #e4defa;
+    border-radius: 10px;
+}
+
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p {
     color: #30245f !important;
 }
 
-.stApp p {
+/* =========================
+   ALERTS AND MESSAGES
+   ========================= */
+[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+[data-testid="stAlert"] p {
+    color: #27304f !important;
+}
+
+/* =========================
+   TABLES AND DATAFRAMES
+   ========================= */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid #e4defa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* =========================
+   DIVIDERS AND CAPTIONS
+   ========================= */
+hr {
+    border-color: #d9d2f0 !important;
+}
+
+.stCaption,
+[data-testid="stCaptionContainer"] p {
+    color: #625b85 !important;
+}
+
+/* Keep sidebar captions white */
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+    color: #ffffff !important;
+}
+
+/* =========================
+   CHECKBOXES
+   ========================= */
+[data-testid="stCheckbox"] label p {
     color: #374151 !important;
 }
 
-/* Make informational messages readable */
-[data-testid="stAlert"] p {
-    color: #2563eb !important;
-}
-/* Fix sidebar caption colors */
-[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
-[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
-    color: #ffffff !important;
-    opacity: 1 !important;
-}
-
-/* Keep all sidebar descriptive text white */
-[data-testid="stSidebar"] small,
-[data-testid="stSidebar"] .stMarkdown p {
-    color: #ffffff !important;
-    opacity: 1 !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
