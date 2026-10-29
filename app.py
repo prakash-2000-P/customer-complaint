@@ -110,7 +110,7 @@ div[data-testid="stForm"] {
 }
 
 .stApp p {
-    color: #374151 !important;
+    color: #ffff !important;
 }
 
 /* Make informational messages readable */
