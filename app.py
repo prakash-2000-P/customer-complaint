@@ -50,6 +50,10 @@ st.markdown("""
     color: white !important;
 }
 h1, h2, h3 {
+    color: #30245f !important;
+}
+
+p, label, [data-testid="stMarkdownContainer"] {
     color: #30245f;
 }
 div.stButton > button {
