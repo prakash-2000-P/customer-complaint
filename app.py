@@ -43,11 +43,31 @@ st.markdown("""
 .stApp {
     background: linear-gradient(135deg, #f5f3ff 0%, #f0f7ff 100%);
 }
+/* Sidebar background */
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg, #211c45, #44358a);
 }
-[data-testid="stSidebar"] * {
-    color: white !important;
+
+/* Sidebar text visibility */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] .stCaption {
+    color: #ffffff !important;
+}
+
+/* Navigation radio labels */
+[data-testid="stSidebar"] div[role="radiogroup"] label,
+[data-testid="stSidebar"] div[role="radiogroup"] label p {
+    color: #ffffff !important;
+}
+
+/* Sidebar headings */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
 }
 h1, h2, h3 {
     color: #30245f !important;
