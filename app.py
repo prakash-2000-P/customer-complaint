@@ -117,6 +117,19 @@ div[data-testid="stForm"] {
 [data-testid="stAlert"] p {
     color: #2563eb !important;
 }
+/* Fix sidebar caption colors */
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Keep all sidebar descriptive text white */
+[data-testid="stSidebar"] small,
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
