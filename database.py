@@ -1,14 +1,15 @@
-import oracledb
 
-DB_USER = "COMPLAINT_APP"
-DB_PASSWORD = "CloudComplaint@"
-DB_DSN = "localhost:1521/XEPDB1"
-
+import streamlit as st
+import psycopg2
 
 def get_connection():
-    return oracledb.connect(
-        user=DB_USER,
-        password=DB_PASSWORD,
-        dsn=DB_DSN
+    db = st.secrets["postgres"]
+    return psycopg2.connect(
+        host=db["host"],
+        port=int(db["port"]),
+        dbname=db["dbname"],
+        user=db["user"],
+        password=db["password"],
+        sslmode="require",
+        connect_timeout=10,
     )
-    
