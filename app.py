@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -88,11 +87,11 @@ def fetch_complaints():
     cursor = connection.cursor()
     try:
         cursor.execute("""
-            SELECT COMPLAINT_ID, COMPLAINT_TEXT,
-                   PREDICTED_DEPARTMENT, CREATED_AT,
-                   STATUS
-            FROM SYSTEM.COMPLAINTS
-            ORDER BY COMPLAINT_ID DESC
+            SELECT complaint_id, complaint_text,
+                   predicted_department, created_at,
+                   status
+            FROM public.complaints
+            ORDER BY complaint_id DESC
         """)
         rows = cursor.fetchall()
         return pd.DataFrame(
@@ -112,17 +111,12 @@ def update_complaint(complaint_id, text, department, status):
     cursor = connection.cursor()
     try:
         cursor.execute("""
-            UPDATE SYSTEM.COMPLAINTS
-            SET COMPLAINT_TEXT = :text,
-                PREDICTED_DEPARTMENT = :department,
-                STATUS = :status
-            WHERE COMPLAINT_ID = :id
-        """, {
-            "text": text,
-            "department": department,
-            "status": status,
-            "id": complaint_id
-        })
+            UPDATE public.complaints
+            SET complaint_text = %s,
+                predicted_department = %s,
+                status = %s
+            WHERE complaint_id = %s
+        """, (text, department, status, complaint_id))
         connection.commit()
     finally:
         cursor.close()
@@ -136,8 +130,8 @@ def delete_complaint(complaint_id):
     cursor = connection.cursor()
     try:
         cursor.execute(
-            "DELETE FROM SYSTEM.COMPLAINTS WHERE COMPLAINT_ID = :id",
-            {"id": complaint_id}
+            "DELETE FROM public.complaints WHERE complaint_id = %s",
+            (complaint_id,)
         )
         connection.commit()
     finally:
@@ -302,21 +296,21 @@ elif page == "Classify Complaint":
             st.metric("Model confidence estimate", f"{confidence:.1f}%")
             st.caption("Confidence is an estimate, not a guarantee of correctness.")
 
-        if st.button("💾 Submit Complaint to Oracle"):
+        if st.button("💾 Submit Complaint to Supabase"):
             connection = None
             cursor = None
             try:
                 connection = get_connection()
                 cursor = connection.cursor()
                 cursor.execute("""
-                    INSERT INTO SYSTEM.COMPLAINTS
-                        (COMPLAINT_TEXT, PREDICTED_DEPARTMENT, STATUS)
-                    VALUES (:text, :department, :status)
-                """, {
-                    "text": st.session_state["current_complaint"],
-                    "department": prediction,
-                    "status": "Pending"
-                })
+                    INSERT INTO public.complaints
+                        (complaint_text, predicted_department, status)
+                    VALUES (%s, %s, %s)
+                """, (
+                    st.session_state["current_complaint"],
+                    prediction,
+                    "Pending"
+                ))
                 connection.commit()
                 st.success("Complaint saved successfully!")
                 st.session_state.pop("current_complaint", None)
@@ -485,7 +479,7 @@ elif page == "ML Performance":
     2. TF-IDF converts the complaint text into numerical features.
     3. Logistic Regression predicts the most likely department.
     4. The application displays the recommended department.
-    5. The complaint and prediction are stored in Oracle.
+    5. The complaint and prediction are stored in Supabase PostgreSQL.
     """)
 
     st.subheader("Model Information")
