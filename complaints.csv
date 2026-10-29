@@ -1,0 +1,121 @@
+complaint,department
+I forgot my account password and cannot sign in,Account & Login
+My account is locked after several failed login attempts,Account & Login
+I cannot reset my password using the reset link,Account & Login
+My registered email address needs to be changed,Account & Login
+I cannot access my account after changing my phone,Account & Login
+The login page says my username is invalid,Account & Login
+I need help recovering my forgotten username,Account & Login
+My account verification code is not arriving,Account & Login
+My account was logged out and I cannot sign back in,Account & Login
+I want to update my personal details in my account,Account & Login
+My bank account was debited twice for one transaction,Banking & Payments
+My money transfer failed but the amount was deducted,Banking & Payments
+My debit card payment was declined unexpectedly,Banking & Payments
+I cannot withdraw cash using my debit card,Banking & Payments
+My bank transfer is still pending,Banking & Payments
+My UPI payment shows failed but money was deducted,Banking & Payments
+My mobile banking application will not open,Banking & Payments
+I cannot add my bank account for online payments,Banking & Payments
+My credit card payment has not been reflected,Banking & Payments
+I received an incorrect balance after a transaction,Banking & Payments
+I was charged twice for the same purchase,Billing & Refunds
+My invoice contains an incorrect amount,Billing & Refunds
+I have not received my refund after cancellation,Billing & Refunds
+An unexpected service fee was added to my bill,Billing & Refunds
+My monthly subscription payment was taken twice,Billing & Refunds
+The refund amount is less than the amount I paid,Billing & Refunds
+My bill includes a service I never purchased,Billing & Refunds
+I need a copy of my payment receipt,Billing & Refunds
+My discount was not applied to the final bill,Billing & Refunds
+I was charged after cancelling my subscription,Billing & Refunds
+The customer care team has not replied to my complaint,Customer Service
+I have contacted support several times without a solution,Customer Service
+The support agent ended the chat without helping me,Customer Service
+I want to escalate my unresolved complaint,Customer Service
+The representative gave me incorrect information,Customer Service
+I have been waiting too long for a support response,Customer Service
+The customer service team was unable to resolve my issue,Customer Service
+I need to speak with a customer support supervisor,Customer Service
+My complaint was marked resolved but the problem remains,Customer Service
+I received an unhelpful response from customer care,Customer Service
+My package has not arrived on the expected date,Delivery & Logistics
+The delivery person brought the wrong package,Delivery & Logistics
+My parcel arrived with damaged outer packaging,Delivery & Logistics
+The tracking status has not changed for several days,Delivery & Logistics
+My order was marked delivered but I did not receive it,Delivery & Logistics
+The courier could not find my delivery address,Delivery & Logistics
+My package was sent to the wrong address,Delivery & Logistics
+The delivery agent cancelled delivery without contacting me,Delivery & Logistics
+I need to change the delivery date for my parcel,Delivery & Logistics
+My shipment is delayed without any explanation,Delivery & Logistics
+I noticed an unauthorized transaction in my account,Fraud & Security
+Someone used my account without my permission,Fraud & Security
+I received a suspicious message asking for my password,Fraud & Security
+I think my account has been hacked,Fraud & Security
+My payment card was used for a transaction I did not make,Fraud & Security
+I received a suspicious link claiming I won a prize,Fraud & Security
+Someone changed my account details without approval,Fraud & Security
+I suspect a fake website collected my payment information,Fraud & Security
+I received a login alert from an unfamiliar device,Fraud & Security
+I want to report a suspected scam transaction,Fraud & Security
+My internet connection keeps disconnecting,Internet & Telecom
+My broadband speed is much slower than promised,Internet & Telecom
+I have had no internet connection since yesterday,Internet & Telecom
+My mobile network signal is very weak,Internet & Telecom
+My phone calls keep dropping unexpectedly,Internet & Telecom
+I cannot use mobile data even with an active plan,Internet & Telecom
+My broadband router shows no internet access,Internet & Telecom
+I am unable to make outgoing calls on my phone,Internet & Telecom
+My internet service has frequent outages,Internet & Telecom
+My mobile recharge was successful but data is unavailable,Internet & Telecom
+I placed an order but received no confirmation,Order & Booking
+I want to cancel an order that has not shipped,Order & Booking
+The website does not let me place an order,Order & Booking
+My booking confirmation has the wrong date,Order & Booking
+I need to change the date of my reservation,Order & Booking
+My order was cancelled without my permission,Order & Booking
+I cannot find my recent order in order history,Order & Booking
+The quantity in my order confirmation is incorrect,Order & Booking
+I accidentally booked the wrong service,Order & Booking
+The available booking slot disappeared during checkout,Order & Booking
+The product I received is broken,Product Quality & Returns
+The item I purchased does not work properly,Product Quality & Returns
+The product has a defect that was not mentioned,Product Quality & Returns
+I received a different colour from the one ordered,Product Quality & Returns
+The product is missing important accessories,Product Quality & Returns
+I want to return a product that is defective,Product Quality & Returns
+The item does not match the product description,Product Quality & Returns
+The product stopped working after two days,Product Quality & Returns
+The package contained a damaged electronic device,Product Quality & Returns
+I received an expired product,Product Quality & Returns
+The application crashes whenever I open it,Technical Support
+The website displays an error when I submit a form,Technical Support
+The mobile application freezes on the loading screen,Technical Support
+I cannot upload a document to the website,Technical Support
+The software installation fails on my computer,Technical Support
+The search feature returns no results,Technical Support
+The application shows a blank screen after login,Technical Support
+I cannot download my report from the portal,Technical Support
+The website is not displaying correctly on my browser,Technical Support
+I receive an error when trying to save my settings,Technical Support
+"My salary account was debited twice for one transaction",Banking & Payments
+"My bank transfer is still pending after two days",Banking & Payments
+"I cannot reset my password because the OTP never arrives",Account & Login
+"My account keeps logging me out automatically",Account & Login
+"I was charged a subscription fee after cancelling",Billing & Refunds
+"My refund has not arrived even though it was approved",Billing & Refunds
+"The delivery agent marked my parcel delivered but I did not receive it",Delivery & Logistics
+"My order has been delayed for more than a week",Delivery & Logistics
+"I received a suspicious message asking for my bank PIN",Fraud & Security
+"Someone accessed my account without my permission",Fraud & Security
+"My mobile data stops working several times a day",Internet & Telecom
+"My broadband connection disconnects every few minutes",Internet & Telecom
+"My booking confirmation email has not arrived",Order & Booking
+"I need to cancel my reservation but the website shows an error",Order & Booking
+"The product arrived with a broken screen",Product Quality & Returns
+"The item I received is different from the product description",Product Quality & Returns
+"The application crashes whenever I open the settings page",Technical Support
+"I receive an error message whenever I upload a document",Technical Support
+"The support team has not replied to my complaint",Customer Service
+"The customer care representative ended the call without resolving my issue",Customer Service
