@@ -82,6 +82,21 @@ div[data-testid="stForm"] {
     border-radius: 14px;
     border: 1px solid #e4defa;
 }
+/* Dashboard heading and description */
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #30245f !important;
+}
+
+.stApp p {
+    color: #374151 !important;
+}
+
+/* Make informational messages readable */
+[data-testid="stAlert"] p {
+    color: #2563eb !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
