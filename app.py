@@ -254,7 +254,27 @@ hr {
 [data-testid="stCheckbox"] label p {
     color: #374151 !important;
 }
+/* Fix chart containers */
+[data-testid="stVegaLiteChart"],
+[data-testid="stVegaLiteChart"] > div,
+[data-testid="stArrowVegaLiteChart"],
+[data-testid="stVegaLiteChart"] canvas {
+    background-color: #ffffff !important;
+    border-radius: 12px;
+}
 
+/* Keep chart sections clean */
+[data-testid="stVegaLiteChart"] {
+    background: #ffffff !important;
+    border: 1px solid #e4defa;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+/* Make chart labels readable */
+[data-testid="stVegaLiteChart"] svg text {
+    fill: #374151 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
