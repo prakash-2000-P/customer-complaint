@@ -254,27 +254,72 @@ hr {
 [data-testid="stCheckbox"] label p {
     color: #374151 !important;
 }
-/* Fix chart containers */
-[data-testid="stVegaLiteChart"],
-[data-testid="stVegaLiteChart"] > div,
-[data-testid="stArrowVegaLiteChart"],
-[data-testid="stVegaLiteChart"] canvas {
+
+/* ===== FIX MANAGE COMPLAINTS COLORS ===== */
+
+/* Department and status dropdowns */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
     background-color: #ffffff !important;
-    border-radius: 12px;
+    color: #30245f !important;
+    border: 1px solid #c9c4e8 !important;
+    border-radius: 8px !important;
 }
 
-/* Keep chart sections clean */
-[data-testid="stVegaLiteChart"] {
-    background: #ffffff !important;
-    border: 1px solid #e4defa;
-    padding: 12px;
-    border-radius: 12px;
+/* Selected dropdown text and arrow */
+[data-testid="stSelectbox"] [data-baseweb="select"] div,
+[data-testid="stSelectbox"] [data-baseweb="select"] span,
+[data-testid="stSelectbox"] [data-baseweb="select"] input {
+    color: #30245f !important;
 }
 
-/* Make chart labels readable */
-[data-testid="stVegaLiteChart"] svg text {
-    fill: #374151 !important;
+/* Dropdown options menu */
+[data-baseweb="popover"],
+[data-baseweb="menu"] {
+    background-color: #ffffff !important;
 }
+
+[role="option"] {
+    background-color: #ffffff !important;
+    color: #30245f !important;
+}
+
+[role="option"]:hover {
+    background-color: #eee9ff !important;
+    color: #30245f !important;
+}
+
+/* Data table background and text */
+[data-testid="stDataFrame"] {
+    background-color: #ffffff !important;
+    border: 1px solid #ddd6f3 !important;
+    border-radius: 10px !important;
+}
+
+/* White background for table cells */
+[data-testid="stDataFrame"] iframe {
+    background-color: #ffffff !important;
+}
+
+/* Search input */
+[data-testid="stTextInput"] input {
+    background-color: #ffffff !important;
+    color: #30245f !important;
+    border: 1px solid #c9c4e8 !important;
+}
+
+/* Labels and result count */
+[data-testid="stAppViewContainer"] .main label,
+[data-testid="stAppViewContainer"] .main p {
+    color: #30245f !important;
+}
+
+/* Complaint edit form and text area */
+[data-testid="stTextArea"] textarea {
+    background-color: #ffffff !important;
+    color: #30245f !important;
+    border: 1px solid #c9c4e8 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
